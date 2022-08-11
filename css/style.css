@@ -27,7 +27,7 @@ body {
     }
 }
 @media (max-width: 575px){
-    body {font-size: 13px;}
+    body {font-size: 12px;}
 }
 
 
@@ -101,48 +101,43 @@ select::-ms-expand { /* for IE 11 */display: none;}
 select:hover {cursor: pointer;}
 
 /* checkbox customization */
-.checkbox {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+label {
+  display: flex;
+  align-items: center;
 }
-.checkbox input[type="checkbox"] {
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    -ms-appearance:none;
-    box-shadow: none;
-    border: 3px solid var(--color-1);
-    border-radius: 0;
-    height: 1em;
-    min-height: unset;
-    width: 1em;
-    position: relative;
-    box-sizing: content-box;
-    margin-right: .25em;
+label span {flex: 1;}
+input[type="checkbox"] {
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  box-shadow: none;
+  padding: 0px;
+  border: 3px solid var(--color-1);
+  border-radius: 5px;
+  height: 1em;
+  min-height: unset;
+  width: 1em;
+  position: relative;
+  box-sizing: content-box;
+  margin-right: .25em;
 }
-.checkbox input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: .4em;
-    height: .9em;
-    border: 0 solid #000;
-    border-width: 0 2px 2px 0;
-    transform: rotateZ(45deg);
-    margin: .15em .3em;
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: .5em;
+  height: .9em;
+  border: 0 solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotateZ(40deg);
+  margin: .15em .3em;
 }
-.checkbox label {flex: 1;}
 
 /* radiobutton customization */
-.radio {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.radio input[type="radio"] {
+input[type="radio"] {
     appearance:none;
     -webkit-appearance:none;
     -moz-appearance:none;
@@ -156,7 +151,7 @@ select:hover {cursor: pointer;}
     box-sizing: content-box;
     margin-right: .25em;
 }
-.radio input[type="radio"]:checked::after {
+input[type="radio"]:checked::after {
     content: "";
     position: absolute;
     top: 25%;
@@ -166,7 +161,6 @@ select:hover {cursor: pointer;}
     background-color: var(--color-1);
     border-radius: 50%;
 }
-.radio label {flex: 1;}
 
 
 /* кнопки */
@@ -398,7 +392,64 @@ h4 {
 
 
 
-/* Всплывающая форма обратной связи */
+/* Modals & Offcanvas */
+.offcanvas {
+  background: #FFFFFF;
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 32px 32px 0px 0px;
+  overflow: hidden;
+  height: fit-content;
+  max-height: 100vh;
+}
+.offcanvas-header {
+  position: relative;
+  padding: 1.5em;
+}
+.offcanvas-body {
+  padding: 0 1rem 1rem;
+}
+.offcanvas .oc-close {
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+  z-index: 10;
+  background-color: #F6F6F6;
+  font-size: 1em;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+}
+.offcanvas .oc-close svg {
+  width: .75em;
+  height: .75em;
+  fill: none;
+}
+.offcanvas .oc-close svg path {
+  stroke: #C8C8C8;
+  stroke-linecap: round;
+}
+
+.mobile-contacts-menu li:not(:first-child){
+  margin-top: .75em;
+}
+.mobile-contacts-menu a,
+.mobile-contacts-menu button {
+  width: 100%;
+  font-size: 1.3em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: .5em;
+  border-radius: 2em;
+}
+.mobile-contacts-menu a img,
+.mobile-contacts-menu button img{
+  margin-right: 1em;
+  width: 3em;
+  width: 3em;
+}
+
 .modal-dialog {
   width: calc(100% - 60px);
   max-width: 1400px;
@@ -407,7 +458,7 @@ h4 {
   position: relative;
   background: #FFFFFF;
   border: 3px solid var(--color-1);
-  border-radius: 2px;
+  border-radius: 2em;
   padding: 2em;
 }
 .close {
@@ -1047,10 +1098,7 @@ footer nav a:hover, footer nav a:focus, footer nav a:active {
   object-fit: contain;
 }
 @media (max-width: 991px){
-  .wapp {
-    right: 1em;
-    bottom: 60px;
-  }
+  .wapp {display: none;}
 }
 
 

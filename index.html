@@ -37,7 +37,7 @@
 
 			<a href="https://vk.com/imperial_stom" target="_blank"><img src="images/icons/vk.svg" alt=""></a>
 
-			<button type="button" data-toggle="modal" data-target="#modal_1" class="d-none d-xl-block btn-main btn-1 fs-08">Заказать звонок</button>
+			<button type="button" data-bs-toggle="modal" data-bs-target="#modal-1" class="d-none d-xl-block btn-main btn-1 fs-08">Заказать звонок</button>
 		</div>
 	</header>
 
@@ -50,7 +50,7 @@
 				<div class="col-md-8">
 					<h1>Имплантация зубов<br/> «под ключ» в Казани<br/> всего за 21000 ₽</h1>
 					<p class="fs-16 fw-5">Высокий уровень приживляемости элементов, восстановление эстетики на долгие годы по приятной цене с гарантией на импланты</p>
-					<button type="button" class="btn-main btn-2 mt-4">БЕСПлаТНАЯ КОНСУЛЬТАЦИЯ</button>
+					<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-2 mt-4">БЕСПлаТНАЯ КОНСУЛЬТАЦИЯ</button>
 				</div>
 			</div>
 		</div>
@@ -135,7 +135,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
+						<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -151,7 +151,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
+						<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -167,7 +167,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
+						<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -183,7 +183,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
+						<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -257,7 +257,7 @@
 					</div>
 				</div>
 			</div>
-			<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 m-auto">Бесплатная консультация</button>
+			<button type="button" data-bs-toggle="modal" data-bs-target="#modal-2" class="btn-main btn-1 m-auto">Бесплатная консультация</button>
 		</div>
 	</section>
 
@@ -351,7 +351,7 @@
 						</div>
 					</div>
 
-		            <button type="button" data-toggle="modal" data-target="#modal_3" class="btn-main btn-2 fs-13">Записаться</button>
+		            <button type="button" data-bs-toggle="modal" data-bs-target="#modal-3" class="btn-main btn-2 fs-13">Записаться</button>
 				</div>
 				<div class="col-lg-6 col-xl-7">
 					<img src="images/img2.jpg" alt="" class="img-fluid">
@@ -623,19 +623,19 @@
 					</a>
 				</li>
 				<li>
-					<button type="button">
+					<button type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-contacts">
 						<img src="images/icons/contacts.svg" alt="Контакты">
 					</button>
 				</li>
 			</ul>
 		</nav>
 	</footer>
-
+	  
 	<!-- modal Заказать звонок -->
-	<div class="modal fade" id="modal_1" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	<div class="modal fade" id="modal-1" tabindex="-1" aria-hidden="true">
+	  <div class="modal-dialog">
 	  	<div class="modal-content">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+	        <button type="button" class="close" data-bs-dismiss="modal">×</button>
 	        <form action="">
 	        	<h2 class="text-center">Заказать звонок</h2>
 	        	<p class="fs-13 mb-4"><strong>Запись через сайт является предварительной.</strong> Для отправки заявки достаточно номера телефона. Наш сотрудник свяжется с вами для подтверждения записи к специалисту. Но чтобы быстрее подтвердить дату и время приёма рекоммендуем заполнять все поля.</p>
@@ -650,10 +650,10 @@
 	        			<button type="submit" class="btn-main btn-1 h-100 w-100">Отправить</button>
 	        		</div>
 	        		<div class="col-12">
-	        			<div class="checkbox">
+	        			<label class="checkbox">
 	        				<input type="checkbox">
-	        				<label>Согласен с обработкой персональных данных</label>
-	        			</div>
+	        				<span>Согласен с обработкой персональных данных</ы>
+	        			</label>
 	        		</div>
 	        	</div>
 	        </form>
@@ -662,10 +662,10 @@
 	</div>
 
 	<!-- modal Записаться на консультацию -->
-	<div class="modal fade" id="modal_2" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	<div class="modal fade" id="modal-2" tabindex="-1" aria-hidden="true">
+	  <div class="modal-dialog">
 	  	<div class="modal-content">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+	        <button type="button" class="close" data-bs-dismiss="modal">×</button>
 	        <form action="">
 	        	<h2 class="text-center">Записаться  на консультацию</h2>
 	        	<p class="fs-13 mb-4"><strong>Запись через сайт является предварительной.</strong> Для отправки заявки достаточно номера телефона. Наш сотрудник свяжется с вами для подтверждения записи к специалисту. Но чтобы быстрее подтвердить дату и время приёма рекоммендуем заполнять все поля.</p>
@@ -701,10 +701,10 @@
 	        	</div>
 	        	<div class="row align-items-center">
 	        		<div class="col-md-8 mb-4 mb-md-0">
-	        			<div class="checkbox">
+	        			<label>
 	        				<input type="checkbox">
-	        				<label>Согласен с обработкой персональных данных</label>
-	        			</div>
+	        				<span>Согласен с обработкой персональных данных</span>
+	        			</label>
 	        		</div>
 	        		<div class="col-md-4">
 	        			<button type="submit" class="btn-main btn-1 h-100 w-100 fs-12">Отправить</button>
@@ -716,10 +716,10 @@
 	</div>
 
 	<!-- modal Запись к врачу -->
-	<div class="modal fade" id="modal_3" tabindex="-1" role="dialog" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
+	<div class="modal fade" id="modal-3" tabindex="-1" aria-hidden="true">
+	  <div class="modal-dialog">
 	  	<div class="modal-content">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+	        <button type="button" class="close" data-bs-dismiss="modal">×</button>
 	        <form action="">
 	        	<h2 class="text-center">Запись к врачу</h2>
 	        	<p class="fs-13 mb-4"><strong>Запись через сайт является предварительной.</strong> Для отправки заявки достаточно номера телефона. Наш сотрудник свяжется с вами для подтверждения записи к специалисту. Но чтобы быстрее подтвердить дату и время приёма рекоммендуем заполнять все поля.</p>
@@ -755,10 +755,10 @@
 	        	</div>
 	        	<div class="row align-items-center">
 	        		<div class="col-md-8 mb-4 mb-md-0">
-	        			<div class="checkbox">
+	        			<label>
 	        				<input type="checkbox">
-	        				<label>Согласен с обработкой персональных данных</label>
-	        			</div>
+	        				<span>Согласен с обработкой персональных данных</span>
+	        			</label>
 	        		</div>
 	        		<div class="col-md-4">
 	        			<button type="submit" class="btn-main btn-1 h-100 w-100 fs-12">Отправить</button>
@@ -767,6 +767,49 @@
 	        </form>
 	    </div>
 	  </div>
+	</div>
+
+	<!-- mobile contacts -->
+	<div class="offcanvas offcanvas-bottom" tabindex="-1" id="mobile-contacts">
+		<div class="offcanvas-header">
+		  <h3 class="text-center w-100 mb-0">Контактная информация</h3>
+		  <button type="button" class="oc-close" data-bs-dismiss="offcanvas">
+			<svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+				<path d="M6.82837 1.17157L1.17151 6.82842"/>
+				<path d="M6.82837 6.82843L1.17152 1.17158"/>
+			</svg>
+		  </button>
+		</div>
+		<div class="offcanvas-body">
+			<nav class="mobile-contacts-menu">
+				<ul class="list-unstyled">
+					<li>
+						<a href="tel:+78432495535">
+							<img src="images/icons/phone.png" alt="phone">
+							<span>+7 (843) 249-55-35</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://wa.me/79274969529">
+							<img src="images/icons/WhatsApp.png" alt="WhatsApp">
+							<span>+7 (927) 496-95-29</span>
+						</a>
+					</li>
+					<li>
+						<button type="button" data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#modal-3">
+							<img src="images/icons/appointment.png" alt="appointment">
+							<span>Записаться на приём</span>
+						</button>
+					</li>
+					<li>
+						<a href="#sec_13">
+							<img src="images/icons/address.png" alt="address">
+							<span>Показать адрес</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</div>
 
 	<a class="wapp" href="https://wa.me/79274969529"><img src="images/icons/WhatsApp.png" alt="WhatsApp"></a>
