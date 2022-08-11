@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Престиж Дент</title>
+	<title>Империал</title>
 	<link rel="icon" href="images/favicon.png" type="image/png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
@@ -13,10 +13,10 @@
 	<link rel="stylesheet" href="fonts/Gilroy/stylesheet.css" />
 </head>
 <body>
-	<header class="py-3">
-		<div class="container dropdown">
+	<header id="top" class="py-3">
+		<div class="container">
 			<a href="index.html" class="logo"><img src="images/logo.png" alt="Престиж Дент"></a>
-			<nav>
+			<nav class="d-none d-lg-block">
 				<ul class="list-unstyled d-flex align-items-center">
 					<li>
 						<a class="" href="#sec_3">О процедуре</a>
@@ -32,13 +32,12 @@
 					</li>
 				</ul> 
 			</nav>
-			<div>
-				<div class="fs-12 fw-7 mb-1"><a href="tel:+78432495535">+7 (843) 249 55 35</a></div>
-			</div>
+			
+			<div class="d-none d-sm-block fs-12 fw-7 mb-1"><a href="tel:+78432495535">+7 (843) 249 55 35</a></div>
 
 			<a href="https://vk.com/imperial_stom" target="_blank"><img src="images/icons/vk.svg" alt=""></a>
 
-			<button type="button" data-toggle="modal" data-target="#modal_1" class="btn-main btn-1">Заказать звонок</button>
+			<button type="button" data-toggle="modal" data-target="#modal_1" class="d-none d-xl-block btn-main btn-1 fs-08">Заказать звонок</button>
 		</div>
 	</header>
 
@@ -48,7 +47,7 @@
 		<img class="bg-3" src="images/bg/doctor.png" alt="doctor"/>
 		<div class="container">
 			<div class="row">
-				<div class="col-8">
+				<div class="col-md-8">
 					<h1>Имплантация зубов<br/> «под ключ» в Казани<br/> всего за 21000 ₽</h1>
 					<p class="fs-16 fw-5">Высокий уровень приживляемости элементов, восстановление эстетики на долгие годы по приятной цене с гарантией на импланты</p>
 					<button type="button" class="btn-main btn-2 mt-4">БЕСПлаТНАЯ КОНСУЛЬТАЦИЯ</button>
@@ -136,7 +135,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 mt-3">
+						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -152,7 +151,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 mt-3">
+						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -168,7 +167,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 mt-3">
+						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -184,7 +183,7 @@
 								<div class="fs-11 mt-3">От <span class="fw-7">25 000 руб.</span></div>
 							</figcaption>
 						</figure>
-						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 mt-3">
+						<button type="button" data-toggle="modal" data-target="#modal_2" class="btn-main btn-1 w-100 fs-09 px-3 py-2 mt-3">
 							<img src="images/icons/tooth.svg" class="me-2">
 							Получить консультацию
 						</button>
@@ -325,9 +324,9 @@
 		</div>
 	</section>
 
-	<section class="sec-7" class="py-5">
+	<section id="sec-7" class="py-5">
 		<div class="container">
-			<div class="offer row no-gutters">
+			<div class="offer row g-0">
 				<div class="col-lg-6 col-xl-5 bg_color_1 p-3 py-sm-4 px-sm-4 px-xl-5">
 					<h2 class="white">Акция по имплантации: "Готовый зуб" 21 000 руб</h2>
 					<p class="white mb-3">Только сейчас в стоматологической клинике Империал действует выгодное предложение на готовый зуб «под ключ» от 21 000 рублей*. <em>Возможна рассрочка*.</em></p>
@@ -365,7 +364,7 @@
 	<section id="sec_8" class="py-5">
 		<div class="container position-relative">
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-xl-10 col-xxl-8">
 					<h2>Чуткость и внимательность врачей - отличительная особенность стоматологии «Престиж-Дент». Качественное лечение - наша визитная карточка. Улыбка клиента - наша самая ценная награда!</h2>
 				</div>
 				<div class="col-lg-6">
@@ -446,7 +445,7 @@
 	<section class="sec-10 py-5">
 		<div class="container position-relative">
 			<h2>Сертификаты клиники</h2>
-			<div class="row row-cols-3">
+			<div class="row row-cols-3 g-2 g-sm-4">
 				<div>
 					<a href="images/clinic/sertificate-1.jpg" data-fancybox="clinic-sertificates">
 						<img src="images/clinic/sertificate-1.jpg" alt="Сертификат клиники" class="img-fluid">
@@ -466,7 +465,7 @@
 		</div>
 	</section>
 
-	<section id="sec_11" class="bg_color_3 py-5">
+	<section id="sec_11" class="bg_color_3 py-4 py-sm-5">
 		<div class="container">
 			<h2>Стоимость имплантации зубов</h2>
 			<div class="row mb-4">
@@ -475,11 +474,11 @@
 				</div>
 			</div>
 			<button type="button" class="btn_price" data-bs-toggle="collapse" data-bs-target="#price1" aria-expanded="false">
-				<div class="d-flex align-items-center">
-					<div class="icon-bg me-4">
+				<div class="flex-1 d-flex align-items-center">
+					<div class="icon-bg me-2 me-sm-4">
 						<img src="images/icons/implant.svg" alt="Цены на услуги имплантации">
 					</div>
-				    <span class="fs-12 fw-5">Цены на услуги имплантации</span>
+				    <span class="fs-12 fw-5 flex-1">Цены на услуги имплантации</span>
 			    </div>
 			    <div class="indicator">❯</div>
 			</button>
@@ -549,8 +548,8 @@
 
 	<section id="sec_13" class="py-5">
 		<div class="container">
-			<h2 class="mb-5">Адреса и контакты</h2>
-			<div class="row row-cols-2">
+			<h2 class="mb-4 mb-sm-5">Адреса и контакты</h2>
+			<div class="row row-cols-sm-2">
 				<div class="d-flex align-items-start mb-4">
 					<img src="images/icons/pin.svg" alt="" class="me-4">
 					<div class="flex-1">
@@ -558,7 +557,7 @@
 						<div class="fs-12 mb-2"><a href="tel:+78432495535">+7 (843) 249 55 35</a></div>
 					</div>
 				</div>
-				<div class="mb-4">
+				<div class="ps-5 ps-sm-0">
 					<div class="fs-12 mb-2"><span class="fw-6">пн-пт:</span> 9:00-20:00;</div>
 					<div class="fs-12 mb-2"><span class="fw-6">сб:</span> 9:00-16:00;</div>
 					<div class="fs-12 mb-2"><span class="fw-6">вс:</span> выходной</div>
@@ -572,12 +571,12 @@
 	</section>
 
 	<footer class="py-3">
-		<div class="container h-100 d-flex align-items-center">
+		<div class="container h-100 d-none d-lg-flex align-items-center">
 			<div class="copyright">
 				<div class="white">Империал © <span id="year"></span></div>
 				<div class="mt-1 fs-08"><a href="#" class="white">Политика конфиденциальности</a></div>
 			</div>
-			<nav class="flex-1 mx-5">
+			<nav class="flex-1 mx-4 mx-xl-5">
 				<ul class="list-unstyled d-flex justify-content-around w-100">
 					<li>
 						<a href="#sec_3">О процедуре</a>
@@ -601,6 +600,35 @@
 				<img src="images/asm_white.png" alt="">
 			</a>
 		</div>
+		<nav class="container h-100 d-lg-none">
+			<ul class="list-unstyled d-flex align-items-center justify-content-around">
+				<li>
+					<a href="#top">
+						<img src="images/icons/home.svg" alt="вверх">
+					</a>
+				</li>
+				<li>
+					<a href="#sec_3">
+						<img src="images/icons/dental-treatment.svg" alt="Имплантация зубов">
+					</a>
+				</li>
+				<li>
+					<a href="#sec-7">
+						<img src="images/icons/discount.svg" alt="Акция">
+					</a>
+				</li>
+				<li>
+					<a href="#sec_11">
+						<img src="images/icons/price.svg" alt="Услуги и цены">
+					</a>
+				</li>
+				<li>
+					<button type="button">
+						<img src="images/icons/contacts.svg" alt="Контакты">
+					</button>
+				</li>
+			</ul>
+		</nav>
 	</footer>
 
 	<!-- modal Заказать звонок -->
@@ -740,6 +768,8 @@
 	    </div>
 	  </div>
 	</div>
+
+	<a class="wapp" href="https://wa.me/79274969529"><img src="images/icons/WhatsApp.png" alt="WhatsApp"></a>
 
 	<!-- Skripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

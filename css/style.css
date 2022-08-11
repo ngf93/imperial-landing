@@ -21,7 +21,10 @@ body {
     body {font-size: 15px;}
 }
 @media (max-width: 991px){
-    body {font-size: 14px;}
+    body {
+      font-size: 14px;
+      padding-bottom: 60px;
+    }
 }
 @media (max-width: 575px){
     body {font-size: 13px;}
@@ -240,39 +243,39 @@ button[aria-haspopup="false"]::after {content: unset;}
 /* TEXT STYLIZATION */
 h1, h2, h3, h4, h5 {font-family: var(--font);}
 h1 {
-    font-size: 4em;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: left;
-    line-height: 120%;
-    letter-spacing: 0.04em;
-    margin-bottom: .5em;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+  line-height: 120%;
+  letter-spacing: 0.04em;
+  margin-bottom: .5em;
 }
-h1.inner {font-size: 2.5em;}
-@media (max-width: 767px){h1 {font-size: 2.5em;}}
-@media (max-width: 575px){h1 {font-size: 2em;}}
 h2 {
-    text-align: left;
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: .6em;
+  text-align: left;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: .6em;
 }
-@media (max-width: 767px){h2 {font-size: 1.8em;}}
-@media (max-width: 575px){h2 {font-size: 1.5em;}}
 h3 {
-    text-align: left;
-    font-size: 1.3em;
-    font-weight: 700;
-    margin-bottom: 1em;
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 1em;
 }
 h4 {
-    text-align: left;
-    font-size: 1.1em;
-    font-weight: 700;
-    margin-bottom: 1em;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+@media (max-width: 1399px){h1 {font-size: 3em;}}
+@media (max-width: 991px){h1 {font-size: 2.5em;}}
+@media (max-width: 575px){
+  h1 {font-size: 1.8em;}
+  h2 {font-size: 1.5em;}
 }
 
-.mont {font-family: 'Montserrat', sans-serif;}
 
 .fs-08 {font-size: .8em;}
 .fs-09 {font-size: .9em;}
@@ -313,22 +316,24 @@ h4 {
 
 /****** ICONS ******/
 .icon-bg {
-    width: 4.5em;
-    height: 4.5em;
-    border-radius: 50%;
-    padding: .5em;
-    background-color: var(--color-1);
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  padding: .5em;
+  background-color: var(--color-1);
 }
 .icon-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
 }
-.blue_icon svg path, .blue_icon svg circle {fill: var(--blue);}
-.oran_icon svg path, .oran_icon svg circle {fill: var(--orange);}
-.white_icon svg path, .white_icon svg circle {fill: #fff;}
-
+@media (max-width: 575px){
+  .icon-bg {
+    width: 3em;
+    height: 3em;
+  }
+}
 
 
 /********** sliders ************/
@@ -437,7 +442,7 @@ h4 {
 /* Шапка */
 header .container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -446,8 +451,11 @@ header .container {
   text-align: right;
   width: 50%;
 }
+@media (max-width: 1399px){
+  .logo img {width: 270px;}
+}
 @media (max-width: 575px){
-  .logo img {width: 50px;}
+  .logo img {width: 220px;}
 }
 
 
@@ -526,11 +534,17 @@ section 1 - главный баннер
   right: 0%;
   bottom: 0%;
   width: 35%;
-  object-fit: cover;
-  object-position: left top;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
   z-index: 3;
 }
-
+@media (max-width: 991px){
+  .sec-1 .bg-1, .sec-1 .bg-2, .sec-1 .bg-3 {display: none;}
+}
+@media (max-width: 575px){
+  .sec-1 .fs-16 {font-size: 1.1em;}
+}
 
 
 /************
@@ -548,13 +562,18 @@ section 2 - преимущества
   border-radius: 10px;
   padding: 1em;
   text-align: center;
+  height: 100%;
 }
 .plus .icon-bg {
   margin: -3.8em auto 1em;
 }
+@media (max-width: 991px){
+  .sec-2 {margin-top: -1.5em;}
+}
 @media (max-width: 767px){
+  .sec-2 {margin-top: 2em;margin-bottom: 3em;}
   .plus {height: 100%;}
-  .plus img {margin-top: 0;}
+  .plus .icon-bg {margin: 0 auto 1em;}
 }
 
 /************
@@ -610,13 +629,9 @@ section 3 - Имплантация зубов - видео
   height: 180px;
   object-fit: cover;
 }
-/* .service .text {
-  line-height: 1.2em;
-  height: 6em;
-  overflow: hidden;
-} */
 @media (max-width: 1399px){
   .service img.img_serv {height: 13vw;}
+  .service figcaption {font-size: .9em;}
 }
 @media (max-width: 1199px){
   .service img.img_serv {height: 170px;}
@@ -701,14 +716,29 @@ section 5 - Преимущества имплантации
   z-index: 10;
   padding: 6em 0;
 }
+@media (max-width: 1399px){
+  .sec-5 .photo img {
+    width: 400px;
+    height: 400px;
+  }
+}
 @media (max-width: 1199px){
   .advantages {padding: 4em 0;}
+  .sec-5 .photo img {
+    width: 330px;
+    height: 330px;
+  }
 }
 @media (max-width: 991px){
   .advantages {padding: 2em 0;}
+  .sec-5 .photo img {
+    width: 250px;
+    height: 250px;
+  }
 }
 @media (max-width: 767px){
   .sec-5 .container {background-image: unset;}
+  .sec-5 .photo {display: none;}
 }
 
 
@@ -768,6 +798,11 @@ section 7 - Акция
   font-size: .9em;
   font-weight: 300;
 }
+@media (max-width: 1399px){
+  .counter .item span {
+    font-size: 1.75em;
+  }
+}
 @media (max-width: 1199px){
   .offer img {height: 350px;}
 }
@@ -779,6 +814,7 @@ section 7 - Акция
 }
 @media (max-width: 575px){
   .offer img {height: 60vw;}
+  .counter .item span {font-size: 1em;}
 }
 
 
@@ -831,11 +867,7 @@ section 8 - О врачах
 }
 @media (max-width: 991px){
   .doctor {
-    width: 100%;
-    position: relative;
-    height: 400px;
-    background-position: 50% 100%;
-    justify-content: center;
+    display: none;
   }
 }
 
@@ -935,10 +967,11 @@ section 11 - Стоимость
 @media (max-width: 767px){
   .btn_price {padding: .5em;}
   .btn_price .indicator {font-size: 1em;}
-  .btn_price img {width: 3em;}
 }
 @media (max-width: 575px){
-  .btn_price img {display: none;}
+  .btn_price .indicator {
+    border: 2px solid var(--color-1);
+  }
 }
 
 
@@ -947,6 +980,9 @@ section 11 - Стоимость
   overflow: hidden;
   width: 100%;
   height: 400px;
+}
+@media (max-width: 575px){
+  .map {height: 300px;}
 }
 
 
@@ -969,25 +1005,53 @@ footer nav a:hover, footer nav a:focus, footer nav a:active {
   justify-content: flex-end;
   align-items: center;
   font-family: 'coco';
+  font-size: 1em;
 }
 .developers p {
   color: #fff;
   text-align: right;
 }
 .developers img {
-  width: 80px;
+  width: 5em;
   margin-left: 10px;
 }
-footer .nav-link, footer .nav-link:hover, footer .nav-link:focus, footer .nav-link:active {color: #fff;}
-footer .navbar-toggler .navbar-toggler-icon {background-color: #fff;}
-@media (max-width: 576px){
-  .footer_bottom {
-    flex-wrap: wrap;
-    justify-content: center;
+@media (max-width: 1199px){
+  footer nav a {font-size: 1em;}
+}
+@media (max-width: 991px){
+  footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background: #FFFFFF;
+    box-shadow: 0px -1px 4px rgba(197, 197, 197, 0.25);
+    color: #D8D8D8;
   }
-  .copyright {margin-bottom: 1em;}
 }
 
+
+.wapp {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  width: 3em;
+  height: 3em;
+  z-index: 1000;
+}
+.wapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (max-width: 991px){
+  .wapp {
+    right: 1em;
+    bottom: 60px;
+  }
+}
 
 
 /* Шрифты */
