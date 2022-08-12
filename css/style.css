@@ -265,6 +265,7 @@ h4 {
 }
 @media (max-width: 1399px){h1 {font-size: 3em;}}
 @media (max-width: 991px){h1 {font-size: 2.5em;}}
+@media (max-width: 767px){h1 {font-size: 2em;}}
 @media (max-width: 575px){
   h1 {font-size: 1.8em;}
   h2 {font-size: 1.5em;}
@@ -550,7 +551,7 @@ section 1 - главный баннер
   position: absolute;
   top: 0%;
   right: 0%;
-  bottom: 0%;
+  height: 100%;
   width: 35%;
   object-fit: cover;
   object-position: left bottom;
@@ -560,7 +561,7 @@ section 1 - главный баннер
   position: absolute;
   top: 0%;
   right: 0%;
-  bottom: 0%;
+  height: 100%;
   width: 45%;
   object-fit: cover;
   object-position: left top;
@@ -577,11 +578,22 @@ section 1 - главный баннер
   object-position: right bottom;
   z-index: 3;
 }
+@media (max-width: 1399px){
+  .sec-1{padding: 10% 0 10em;}
+}
 @media (max-width: 991px){
-  .sec-1 .bg-1, .sec-1 .bg-2, .sec-1 .bg-3 {display: none;}
+  .sec-1{padding: 3em 0 9em;}
+  .sec-1 .fs-16 {font-size: 1.3em;}
+}
+@media (max-width: 767px){
+  .sec-1{padding: 3em 0;}
+  .sec-1 .fs-16 {font-size: 1.1em;}
 }
 @media (max-width: 575px){
-  .sec-1 .fs-16 {font-size: 1.1em;}
+  .sec-1 {
+    padding: 2em 0;
+    font-size: 9px;
+  }
 }
 
 
@@ -610,7 +622,12 @@ section 2 - преимущества
   .sec-2 {margin-top: -1.5em;}
 }
 @media (max-width: 767px){
-  .sec-2 {margin-top: 2em;margin-bottom: 3em;}
+  .sec-2 {
+    position: relative;
+    bottom: 0;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
   .plus {height: 100%;}
   .plus .icon-bg {margin: 0 auto 1em;}
 }
@@ -769,8 +786,15 @@ section 5 - Преимущества имплантации
   }
 }
 @media (max-width: 767px){
+  .sec-5 {
+    padding-top: 3em;
+    background-image: unset;
+  }
   .sec-5 .container {background-image: unset;}
-  .sec-5 .photo {display: none;}
+  .sec-5 .photo {
+    position: relative;
+    width: 100%;
+  }
 }
 
 
@@ -859,7 +883,7 @@ section 8 - О врачах
   right: 0;
   height: 100%;
   width: 40%;
-  background: url(../images/bg/teeth&tools.png) no-repeat center;
+  background: url(../images/bg/teeth&tools.png) no-repeat;
   background-size: contain;
   background-position: right top;
   display: flex;
@@ -898,7 +922,30 @@ section 8 - О врачах
   .doctor {width: 50%;}
 }
 @media (max-width: 991px){
-  .doctor {display: none;}
+  .doctor {
+    position: relative;
+    width: 100%;
+    align-items: center;
+    background-position: center top;
+  }
+  .doctor img{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    max-width: 350px;
+  }
+}
+@media (max-width: 575px){
+  .doctor {
+    padding-right: 0;
+    width: 100%;
+  }
+  .doctor>div {
+    width: 100%;
+    padding: 0px 7px 7px 0;
+  }
+  .doctor>div>div {margin:0px}
+  .doctor img {max-width: 250px;}
 }
 
 
