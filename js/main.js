@@ -43,15 +43,21 @@ window.addEventListener('scroll', function() {
     let box = item.getBoundingClientRect();
     let y1=box.top + window.pageYOffset -1;
     let y2=box.bottom + window.pageYOffset;
-
     let link = document.querySelector('a.scroll-link[href="#' + item.id + '"]');
-
-    console.log(window.pageYOffset);
     if (y1 <= window.pageYOffset && window.pageYOffset <= y2){
-
     	link.classList.add('active');
     } else {
     	link.classList.remove('active');
     }
   });;
 });
+
+const myOffcanvas = document.getElementById('mobile-contacts');
+const offcanvasBtn = document.querySelector('button[data-bs-target="#mobile-contacts"]');
+console.log(offcanvasBtn);
+myOffcanvas.addEventListener('show.bs.offcanvas', function () {
+  offcanvasBtn.classList.add('active');
+})
+myOffcanvas.addEventListener('hide.bs.offcanvas', function () {
+  offcanvasBtn.classList.remove('active');
+})
