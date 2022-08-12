@@ -37,21 +37,21 @@ let now = new Date();
 let cur_year = now.getFullYear();
 document.querySelector('#year').innerHTML = cur_year;
 
+// mibile menu indicator
+window.addEventListener('scroll', function() {
+  document.querySelectorAll('.anchor').forEach(item => {
+    let box = item.getBoundingClientRect();
+    let y1=box.top + window.pageYOffset -1;
+    let y2=box.bottom + window.pageYOffset;
 
-/*-------------------------
-  Countdown JS
------------------------------*/
-// $(".ht-countdown").each(function(index, element) {
-//     var $element = $(element),
-//         $date = $element.data('date');
+    let link = document.querySelector('a.scroll-link[href="#' + item.id + '"]');
 
-//     $element.countdown($date, function(event) {
-//         var $this = $(this).html(event.strftime(''
+    console.log(window.pageYOffset);
+    if (y1 <= window.pageYOffset && window.pageYOffset <= y2){
 
-//             +
-//             '<div class="countdown-item"><span class="countdown-item__time">%D</span><span class="countdown-item__label">дней</span></div>' +
-//             '<div class="countdown-item"><span class="countdown-item__time">%H</span><span class="countdown-item__label">часов</span></div>' +
-//             '<div class="countdown-item"><span class="countdown-item__time">%M</span><span class="countdown-item__label">минут</span></div>' +
-//             '<div class="countdown-item"><span class="countdown-item__time">%S</span><span class="countdown-item__label">секунд</span></div>'));
-//     });
-// });
+    	link.classList.add('active');
+    } else {
+    	link.classList.remove('active');
+    }
+  });;
+});

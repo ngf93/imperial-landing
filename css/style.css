@@ -895,9 +895,7 @@ section 8 - О врачах
   .doctor {width: 50%;}
 }
 @media (max-width: 991px){
-  .doctor {
-    display: none;
-  }
+  .doctor {display: none;}
 }
 
 
@@ -948,7 +946,7 @@ section 10 - сертификаты клиники
 /************
 section 11 - Стоимость
 ************/
-#sec_11 {
+.sec-11 {
   background-image: url(../images/bg/leaves2.png), url(../images/bg/leaves2.png);
   background-repeat: no-repeat;
   background-position: 5% 95%, 112% 15%;
@@ -1020,13 +1018,13 @@ footer {
   background-color: var(--color-1);
   color: #fff;
 }
-footer nav a {
+footer nav.desk a {
   font-size: 1.1em;
   font-weight: 500;
   transition: var(--transition);
   border-bottom: 1px solid transparent;
 }
-footer nav a:hover, footer nav a:focus, footer nav a:active {
+footer nav.desk a:hover, footer nav.desk a:focus, footer nav.desk a:active {
   border-bottom: 1px solid #fff;
 }
 .developers {
@@ -1045,7 +1043,7 @@ footer nav a:hover, footer nav a:focus, footer nav a:active {
   margin-left: 10px;
 }
 @media (max-width: 1199px){
-  footer nav a {font-size: 1em;}
+  footer nav.desk a {font-size: 1em;}
 }
 @media (max-width: 991px){
   footer {
@@ -1058,6 +1056,15 @@ footer nav a:hover, footer nav a:focus, footer nav a:active {
     background: #FFFFFF;
     box-shadow: 0px -1px 4px rgba(197, 197, 197, 0.25);
     color: #D8D8D8;
+  }
+  a.scroll-link {
+    transition: var(--transition);
+    filter: grayscale(1);
+    opacity: .2;
+  }
+  a.scroll-link.active {
+    filter: grayscale(0);
+    opacity: 1;
   }
 }
 
