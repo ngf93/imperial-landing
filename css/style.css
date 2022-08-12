@@ -270,7 +270,6 @@ h4 {
   h2 {font-size: 1.5em;}
 }
 
-
 .fs-08 {font-size: .8em;}
 .fs-09 {font-size: .9em;}
 .fs-11 {font-size: 1.1em;}
@@ -299,14 +298,7 @@ h4 {
 .itlc {font-style: italic;}
 .norm {font-style: normal;}
 
-.td_und {text-decoration: underline;}
-.td_lth {text-decoration: line-through;}
-.lh_n {line-height: normal;}
-.bb_1 {border-bottom: 1px solid;}
-.t_ind {text-indent: 2rem;}
-
 .flex-1 {flex:1;}
-
 
 /****** ICONS ******/
 .icon-bg {
@@ -391,7 +383,6 @@ h4 {
 }
 
 
-
 /* Modals & Offcanvas */
 .offcanvas {
   background: #FFFFFF;
@@ -405,9 +396,7 @@ h4 {
   position: relative;
   padding: 1.5em;
 }
-.offcanvas-body {
-  padding: 0 1rem 1rem;
-}
+.offcanvas-body {padding: 0 1rem 1rem;}
 .offcanvas .oc-close {
   position: absolute;
   top: 1.5em;
@@ -429,9 +418,7 @@ h4 {
   stroke-linecap: round;
 }
 
-.mobile-contacts-menu li:not(:first-child){
-  margin-top: .75em;
-}
+.mobile-contacts-menu li:not(:first-child){margin-top: .75em;}
 .mobile-contacts-menu a,
 .mobile-contacts-menu button {
   width: 100%;
@@ -487,7 +474,6 @@ h4 {
         right: 2px;
     }
 }
-
 
 
 /* Шапка */
@@ -630,37 +616,36 @@ section 2 - преимущества
 /************
 section 3 - Имплантация зубов - видео
 ************/
-.video_wrap {position: relative;}
-.video_wrap::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 1.5em);
-  left: calc(50% - 1.5em);
-  width: 3em;
-  height: 3em;
-  background: url(../images/icons/play.png) no-repeat center;
-  background-size: contain;
-}
-.video_wrap:hover::after {content: unset;}
-.video_wrap video {
+.video-wrap {position: relative;}
+.video-wrap a {display: block;}
+.video-wrap video {
   width: 100%;
   height: 245px;
   object-fit: cover;
+  display: block;
+}
+.stretch-img {
+  width: 100%;
+  height: 307px;
+  object-fit: cover;
 }
 @media (max-width: 1399px){
-  .video_wrap video {height: 18vw;}
+  .video-wrap video {height: 220px;}
+  .stretch-img {height: 301px;}
 }
 @media (max-width: 1199px){
-  .video_wrap video {height: 175px;}
+  .video-wrap video {height: 190px;}
+  .stretch-img {height: 268px;}
 }
 @media (max-width: 991px){
-  .video_wrap video {height: 140px;}
+  .video-wrap video {height: 140px;}
+  .stretch-img {height: 228px;}
 }
 @media (max-width: 767px){
-  .video_wrap video {height: 155px;}
+  .video-wrap video {height: 155px;}
 }
 @media (max-width: 575px){
-  .video_wrap video {height: 56vw;}
+  .video-wrap video {height: 56vw;}
 }
 .service {
   height: 100%;
@@ -711,13 +696,6 @@ section 4 - Как проходит имплантация
   position: relative;
   padding: 2em;
   height: 100%;
-}
-.step .title {
-  font-size: 1.1em;
-  font-weight: 700;
-  margin-bottom: 1em;
-  line-height: 1.2em;
-  height: 2.4em;
 }
 @media (max-width: 1199px){
   .step {padding: 1.5em;}
