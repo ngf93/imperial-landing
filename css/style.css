@@ -589,10 +589,11 @@ section 1 - главный баннер
 section 2 - преимущества
 ************/
 .sec-2 {
-  position: relative;
+  position: absolute;
+  bottom: -2.5em;
+  left: 0px;
+  width: 100%;
   z-index: 20;
-  margin-top: -2.5em;
-  margin-bottom: 5em;
 }
 .plus {
   background: #FFF;
@@ -712,6 +713,7 @@ section 5 - Преимущества имплантации
   background-position: 2% 95%, 106% 5%;
   background-size: auto 45%, auto 50%;
   background-color: var(--color-3);
+  padding-top: 6em;
 }
 .sec-5 .container {
   position: relative;
